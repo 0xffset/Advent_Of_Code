@@ -7,8 +7,6 @@
 #include <vector>
 #include <algorithm>
 
-#define BINARYNONSENSE(s) (((s & 0b1111111000)>>3) * 8 + (s & 0b0000000111))
-
 
 static short in[] = {0b0000101001, 0b1010011001, 0b1100001011, 0b0101000100, 0b1001000111, 0b1010100101, 0b0001111010,
                      0b1000010000, 0b0000110001, 0b1100100111, 0b0110110010, 0b1010010011, 0b0100100000, 0b0001000101,
@@ -132,8 +130,8 @@ static short in[] = {0b0000101001, 0b1010011001, 0b1100001011, 0b0101000100, 0b1
 int y2020::day5part1() {
     int highest = 0;
     for (const short &s : in) {
-        if (BINARYNONSENSE(s) > highest) {
-            highest = BINARYNONSENSE(s);
+        if (s > highest) {
+            highest = s;
         }
     }
     return highest;
@@ -142,7 +140,7 @@ int y2020::day5part1() {
 int y2020::day5part2() {
     std::vector<short> IDs;
     for (const short &s : in) {
-        IDs.push_back(BINARYNONSENSE(s));
+        IDs.push_back(s);
     }
     std::sort(IDs.begin(), IDs.end());
     for (int i = 0; i < IDs.size(); i++) {
