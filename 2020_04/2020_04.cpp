@@ -343,21 +343,11 @@ static std::vector<std::string> eyeColors = {
 };
 
 static bool isHex(const std::string &s) {
-    for (char c : s) {
-        if (!isxdigit(c)) {
-            return false;
-        }
-    }
-    return true;
+    return std::all_of(s.begin(), s.end(), [](char c) {return isxdigit(c);});
 }
 
 static bool isNumber(const std::string &s) {
-    for (char c : s) {
-        if (c < '0' || c > '9') {
-            return false;
-        }
-    }
-    return true;
+    return std::all_of(s.begin(), s.end(), [](char c) {return c >= '0' && c <= '9';});
 }
 
 int y2020::day4part2() {
