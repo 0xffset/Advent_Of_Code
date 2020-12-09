@@ -8,6 +8,9 @@
 #include "2020_04/2020_04.hpp"
 #include "2020_05/2020_05.hpp"
 #include "2020_06/2020_06.hpp"
+#include "2020_07/2020_07.hpp"
+#include "2020_08/2020_08.hpp"
+#include "2020_09/2020_09.hpp"
 
 
 int main() {
@@ -30,6 +33,12 @@ int main() {
     std::cout << "2020  5th December Part 2: " << y2020::day5part2() << std::endl;
     std::cout << "2020  6th December Part 1: " << y2020::day6part1() << std::endl;
     std::cout << "2020  6th December Part 2: " << y2020::day6part2() << std::endl;
+    std::cout << "2020  7th December Part 1: " << y2020::day7part1() << std::endl;
+    std::cout << "2020  7th December Part 2: " << y2020::day7part2() << std::endl;
+    std::cout << "2020  8th December Part 1: " << y2020::day8part1() << std::endl;
+    std::cout << "2020  8th December Part 2: " << y2020::day8part2() << std::endl;
+    std::cout << "2020  9th December Part 1: " << y2020::day9part1() << std::endl;
+    std::cout << "2020  9th December Part 2: " << y2020::day9part2() << std::endl;
 
     return 0;
 }
